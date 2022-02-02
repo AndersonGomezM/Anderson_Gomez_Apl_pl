@@ -14,6 +14,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.EntityFrameworkCore;
+using Anderson_Gomez_Ap1_p1.UI.Registros;
+using Anderson_Gomez_Ap1_p1.UI.Consultas;
 
 namespace Anderson_Gomez_Ap1_p1
 {
@@ -25,6 +27,18 @@ namespace Anderson_Gomez_Ap1_p1
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void RegistroMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            //var rRegistros = new rRegistros();
+            //rRegistros.Show();
+        }
+
+        private void ConsultaMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            //var cConsultas = new cConsultas();
+            //cConsultas.Show();
         }
     }
 }
