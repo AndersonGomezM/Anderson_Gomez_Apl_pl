@@ -15,5 +15,10 @@ namespace Anderson_Gomez_Ap1_p1
     /// </summary>
     public partial class App : Application
     {
+        private void App_DispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs args)
+        {
+            MessageBox.Show($"Ocurrio un error:( {args.Exception.Message}","Error no controlado", MessageBoxButton.OK, MessageBoxImage.Error);
+            args.Handled = true;
+        }
     }
 }
