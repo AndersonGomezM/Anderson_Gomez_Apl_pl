@@ -9,7 +9,7 @@ namespace Anderson_Gomez_Ap1_p1.DAL
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlite(@"Data Source=Data\BaseDeDatos.db");
+        optionsBuilder.UseSqlite(@"Data Source=DATA\BaseDeDatos.db");
     }
     }
 }
