@@ -7,7 +7,7 @@ namespace Anderson_Gomez_Ap1_p1.DAL
 {
     public class Contexto : DbContext
     {
-        public DbSet<Productos>? Entidades { get; set; }
+        public DbSet<Productos>? Productos { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
