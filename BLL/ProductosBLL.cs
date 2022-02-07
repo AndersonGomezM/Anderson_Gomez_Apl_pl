@@ -11,12 +11,12 @@ namespace Anderson_Gomez_Ap1_p1.BLL
 {
     public class ProductosBLL
     {
-        public static void Guardar(Productos productos)
+        public static void Guardar(Productos producto)
         {
-            if(!Existe(productos.ProductoId))
-                Insertar(productos);
+            if(!Existe(producto.ProductoId))
+                Insertar(producto);
             else
-                Modificar(productos);
+                Modificar(producto);
         }
 
         public static bool Modificar(Productos productos)
