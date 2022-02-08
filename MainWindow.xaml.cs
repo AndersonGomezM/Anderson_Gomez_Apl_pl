@@ -31,14 +31,14 @@ namespace Anderson_Gomez_Ap1_p1
 
         private void RegistroMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            //var rRegistros = new rRegistros();
-            //rRegistros.Show();
+            var rProductos = new rProductos();
+            rProductos.Show();
         }
 
         private void ConsultaMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            //var cConsultas = new cConsultas();
-            //cConsultas.Show();
+            var cProductos = new cProductos();
+            cProductos.Show();
         }
     }
 }

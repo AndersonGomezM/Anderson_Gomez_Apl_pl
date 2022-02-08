@@ -5,19 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Anderson_Gomez_Ap1_p1"
         mc:Ignorable="d"
-        Title="Registro" Height="300" Width="700">
+        Title="Registro de Colmado" Height="200" Width="300">
     <Grid>
 
         <StackPanel> 
             <Menu> 
                 <MenuItem Header="Registros" >
                     <!-- BOTON PARA EL REGISTRO -->
-                    <MenuItem Header="Registro" x:Name="rRegistro" Click ="RegistroMenuItem_Click" />
+                    <MenuItem Header="Productos" x:Name="rProductos" Click ="RegistroMenuItem_Click" />
                 </MenuItem>
 
                 <MenuItem Header="Consultas" >
                     <!-- BOTON PARA LA CONSULTA -->
-                    <MenuItem Header="Consulta" x:Name="cConsulta" Click ="ConsultaMenuItem_Click" />
+                    <MenuItem Header="Productos" x:Name="cProductos" Click ="ConsultaMenuItem_Click" />
                 </MenuItem>
             </Menu>
 
