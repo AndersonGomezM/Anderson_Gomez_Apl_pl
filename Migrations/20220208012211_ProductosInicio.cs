@@ -9,7 +9,7 @@ namespace Anderson_Gomez_Ap1_p1.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Entidades",
+                name: "Productos",
                 columns: table => new
                 {
                     ProductoId = table.Column<int>(type: "INTEGER", nullable: false)
@@ -21,14 +21,14 @@ namespace Anderson_Gomez_Ap1_p1.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Entidades", x => x.ProductoId);
+                    table.PrimaryKey("PK_Productos", x => x.ProductoId);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Entidades");
+                name: "Productos");
         }
     }
 }

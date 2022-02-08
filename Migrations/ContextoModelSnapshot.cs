@@ -36,7 +36,7 @@ namespace Anderson_Gomez_Ap1_p1.Migrations
 
                     b.HasKey("ProductoId");
 
-                    b.ToTable("Entidades");
+                    b.ToTable("Productos");
                 });
 #pragma warning restore 612, 618
         }

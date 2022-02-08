@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Anderson_Gomez_Ap1_p1.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20220207230017_ProductosInicio")]
+    [Migration("20220208012211_ProductosInicio")]
     partial class ProductosInicio
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -38,7 +38,7 @@ namespace Anderson_Gomez_Ap1_p1.Migrations
 
                     b.HasKey("ProductoId");
 
-                    b.ToTable("Entidades");
+                    b.ToTable("Productos");
                 });
 #pragma warning restore 612, 618
         }
