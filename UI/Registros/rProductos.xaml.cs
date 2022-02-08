@@ -88,6 +88,8 @@ namespace Anderson_Gomez_Ap1_p1.UI.Registros
                 return;
             
             bool confirmar = false;
+            productos.ValorInventario += Convert.ToDecimal(ExistenciaTextBox.Text) * Convert.ToDecimal(CostoTextBox.Text);
+            
             confirmar = ProductosBLL.Guardar(productos);
 
             if (confirmar)
