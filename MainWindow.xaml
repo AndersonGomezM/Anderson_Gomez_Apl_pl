@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Anderson_Gomez_Ap1_p1"
         mc:Ignorable="d"
-        Title="Registro de Colmado" Height="200" Width="300">
-    <Grid>
+        Title="Registro de Colmado" Icon="/Resources/Colmado.ico" Height="200" Width="300">
+    <Grid Background="#72757C" >
 
         <StackPanel> 
             <Menu> 

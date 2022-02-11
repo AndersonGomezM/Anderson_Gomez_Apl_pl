@@ -66,13 +66,13 @@ namespace Anderson_Gomez_Ap1_p1.UI.Registros
 
         private void ExistenciaTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
-            Regex regex = new Regex("[^0-9]+");
+            Regex regex = new Regex("[^0-9]+[null]");
             e.Handled = regex.IsMatch(e.Text);
         }
 
         private void CostoTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
-            Regex regex = new Regex("[^0-9]+");
+            Regex regex = new Regex("[^0-9]+[null]");
             e.Handled = regex.IsMatch(e.Text);
         }
 
