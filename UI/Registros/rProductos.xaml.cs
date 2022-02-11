@@ -1,7 +1,10 @@
 using System;
 using System.Windows;
+using System.Windows.Input;
+using System.Windows.Controls;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Text;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.EntityFrameworkCore;
@@ -13,6 +16,7 @@ namespace Anderson_Gomez_Ap1_p1.UI.Registros
     public partial class rProductos : Window
     {
         private Productos productos = new Productos();
+        
         public rProductos()
         {
             InitializeComponent();
@@ -59,6 +63,32 @@ namespace Anderson_Gomez_Ap1_p1.UI.Registros
 
             return confirmar;
         }
+
+        private void ExistenciaTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
+
+        private void CostoTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
+
+        private void CostoTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            var textB = sender as TextBlock;
+            CalcularValorInventario();
+        }
+
+        private void CalcularValorInventario()
+        {
+            productos.ValorInventario = Convert.ToDecimal(ExistenciaTextBox.Text) * Convert.ToDecimal(CostoTextBox.Text);
+
+            ValorInventarioTextBox.Text = Convert.ToString(productos.ValorInventario);
+        }
+
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
             var confirmar = ProductosBLL.Buscar(this.productos.ProductoId);
@@ -88,7 +118,8 @@ namespace Anderson_Gomez_Ap1_p1.UI.Registros
                 return;
             
             bool confirmar = false;
-            productos.ValorInventario += Convert.ToDecimal(ExistenciaTextBox.Text) * Convert.ToDecimal(CostoTextBox.Text);
+
+            CalcularValorInventario();
             
             confirmar = ProductosBLL.Guardar(productos);
 
