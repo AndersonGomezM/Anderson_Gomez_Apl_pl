@@ -30,19 +30,22 @@
             <!-- Existencia -->
             <Label Content="Existencia:" FontSize="14" />
             <StackPanel Orientation="Horizontal" Margin="5,0,0,0">
-                <TextBox x:Name="ExistenciaTextBox" Text="{Binding Existencia}" Height="20" Width="100" />
+                <TextBox x:Name="ExistenciaTextBox" Text="{Binding Existencia}" Height="20" Width="100"
+                PreviewTextInput="ExistenciaTextBox_PreviewTextInput" />
             </StackPanel>
 
             <!-- Costo -->
             <Label Content="Costo:" FontSize="14" />
             <StackPanel Orientation="Horizontal" Margin="5,0,0,0">
-                <TextBox x:Name="CostoTextBox" Text="{Binding Costo}" Height="20" Width="100" />
+                <TextBox x:Name="CostoTextBox" Text="{Binding Costo}"  Height="20" Width="100"
+                PreviewTextInput="CostoTextBox_PreviewTextInput"
+                TextChanged="CostoTextBox_TextChanged" />
             </StackPanel>
 
             <!-- Valor Inventario -->
             <Label Content="Valor inventario:" FontSize="14" />
             <StackPanel Orientation="Horizontal" Margin="5,0,0,0">
-                <TextBox x:Name="ValorInventarioTextBox" Text="{Binding ValorInventario}" Height="20" Width="100" />
+                <TextBox x:Name="ValorInventarioTextBox" Height="20" Width="100" />
             </StackPanel>
 
             <!-- BARRA DE BOTONES -->
