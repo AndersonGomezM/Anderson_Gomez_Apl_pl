@@ -127,6 +127,7 @@ namespace Anderson_Gomez_Ap1_p1.UI.Registros
             {
                 MessageBox.Show("Se puedo guardar el producto", "Exito",
                     MessageBoxButton.OK, MessageBoxImage.Error);
+                Limpiar();
             }
             else
             {
@@ -142,6 +143,7 @@ namespace Anderson_Gomez_Ap1_p1.UI.Registros
             {
                 MessageBox.Show("Se guardo con exito el producto", "Exito",
                     MessageBoxButton.OK, MessageBoxImage.Error);
+                Limpiar();
             }
             else
             {
