@@ -96,7 +96,7 @@ namespace Anderson_Gomez_Ap1_p1.BLL
             }
             finally { contexto.Dispose(); }
 
-            return productos;
+            return productos!;
         }
 
         public static bool Existe(int id)
@@ -142,7 +142,7 @@ namespace Anderson_Gomez_Ap1_p1.BLL
 
             try
             {
-                lista = contexto.Productos.Where(criterio).ToList();
+                lista = contexto.Productos?.Where(criterio).ToList();
             }
             catch (Exception)
             {
@@ -150,7 +150,7 @@ namespace Anderson_Gomez_Ap1_p1.BLL
             }
             finally { contexto.Dispose(); }
 
-            return lista;
+            return lista!;
         }
     }
 }

@@ -5,16 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Anderson_Gomez_Ap1_p1.UI.Consultas"
         mc:Ignorable="d"
-        Title="Productos de Consulta" Height="360" Width="460" >
-    <Grid>
+        Title="Productos de Consulta" Height="380" Width="510" >
+    <Grid Background="#72757C" >
 
-        <StackPanel Orientation="Vertical" Margin="10" >
+        <StackPanel Orientation="Vertical" Margin="0,20,0,0" >
             
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
 
                 <!-- COMBOBOX -->
-                <Label Content="Filtro:" FontSize="14" />
-                <ComboBox x:Name="FiltroComboBox" Height="20" Width="100" >
+                <Label Content="Filtro:" FontSize="16" Margin="30,0,0,0" />
+                <ComboBox x:Name="FiltroComboBox" Width="100" >
 
                     <ComboBox.Items> 
                         <ComboBoxItem Content="Descripción" />
@@ -24,16 +24,16 @@
                 </ComboBox>
 
                 <!-- CRITERIO -->
-                <Label Content="Criterio:" FontSize="14" />
-                <TextBox x:Name="CriterioTextBox" Height="20" Width="100" />
+                <Label Content="Criterio:" FontSize="16" Margin="10,0,0,0" />
+                <TextBox x:Name="CriterioTextBox" Width="100" />
 
                 <!-- BUSCAR -->
-                <Button Content="🔎 Buscar" Click="BuscarButton_Click" Height="20" />
+                <Button Content="🔎 Buscar" Margin="5,0,0,0" Click="BuscarButton_Click" />
 
             </StackPanel>
 
             <!-- GRID -->
-            <DataGrid x:Name="ProductosDataGrid" Margin="20" Height="250" Width="380" />
+            <DataGrid x:Name="ProductosDataGrid" Margin="0,30,0,0" Height="250" Width="480" />
 
         </StackPanel>
 

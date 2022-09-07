@@ -5,52 +5,59 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Anderson_Gomez_Ap1_p1.UI.Registros"
         mc:Ignorable="d"
-        Title="Productos de registros" Height="400" Width="300" >
-    <Grid>
+        Title="Productos de registros" Height="400" Width="380" >
+    <Grid Background="#72757C" >
 
         <StackPanel Orientation="Vertical" Margin="10" >
            
             <!-- ProductosId -->
             <StackPanel Orientation="Vertical" >
-                <Label Content="ProductoId:" FontSize="14" />
+                <Label Content="ProductoId" FontSize="16" />
 
-                <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
-                    <TextBox x:Name="ProductoIdTextBox" Text="{Binding ProductoId}" Margin="5,0,0,0" Height="20" Width="100" />
-                    <Button Content="🔎" Margin="5,0,0,0" Height="20" Click="BuscarButton_Click" /> 
+                <StackPanel Orientation="Horizontal" Margin="0,1,0,10">
+                    <TextBox x:Name="ProductoIdTextBox" Text="{Binding ProductoId}" Margin="5,0,0,0" Width="100" />
+                    <Button Content="🔎" Margin="5,0,0,0" Click="BuscarButton_Click" /> 
                 </StackPanel>
 
             </StackPanel>
 
             <!-- Descripción -->
-            <Label Content="Descripción:" FontSize="14" />
-            <StackPanel Orientation="Horizontal" Margin="5,0,0,0" >
-                <TextBox x:Name="DescripcionTextBox" Text="{Binding Descripcion}" Height="20" Width="200" />
+            <Label Content="Descripción" FontSize="16" />
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10" >
+                <TextBox x:Name="DescripcionTextBox" Text="{Binding Descripcion}" Width="200" />
             </StackPanel>
 
-            <!-- Existencia -->
-            <Label Content="Existencia:" FontSize="14" />
-            <StackPanel Orientation="Horizontal" Margin="5,0,0,0">
-                <TextBox x:Name="ExistenciaTextBox" Text="{Binding Existencia}" Height="20" Width="100" />
-            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,10" >
 
-            <!-- Costo -->
-            <Label Content="Costo:" FontSize="14" />
-            <StackPanel Orientation="Horizontal" Margin="5,0,0,0">
-                <TextBox x:Name="CostoTextBox" Text="{Binding Costo}" Height="20" Width="100" />
+                <!-- Existencia -->
+                <StackPanel Orientation="Vertical" Margin="0,0,0,10">
+                    <Label Content="Existencia" FontSize="16" />
+                    <TextBox x:Name="ExistenciaTextBox" Text="{Binding Existencia}" Width="100"
+                    PreviewTextInput="ExistenciaTextBox_PreviewTextInput" />
+                </StackPanel>
+
+                <!-- Costo -->
+                <StackPanel Orientation="Vertical" Margin="10,0,0,10">
+                    <Label Content="Costo" FontSize="16" />
+                    <TextBox x:Name="CostoTextBox" Text="{Binding Costo}" Width="100"
+                    PreviewTextInput="CostoTextBox_PreviewTextInput"
+                    TextChanged="CostoTextBox_TextChanged" />
+                </StackPanel>
+
             </StackPanel>
 
             <!-- Valor Inventario -->
-            <Label Content="Valor inventario:" FontSize="14" />
+            <Label Content="Valor inventario" FontSize="16" />
             <StackPanel Orientation="Horizontal" Margin="5,0,0,0">
-                <TextBox x:Name="ValorInventarioTextBox" Text="{Binding ValorInventario}" Height="20" Width="100" />
+                <TextBox x:Name="ValorInventarioTextBox" Width="100" />
             </StackPanel>
 
             <!-- BARRA DE BOTONES -->
-            <StackPanel Margin="20,16,0,0" Orientation="Horizontal" HorizontalAlignment="Center" >
+            <StackPanel Margin="0,20,0,0" Orientation="Horizontal" HorizontalAlignment="Center" >
                 
                 <Button Content="🆕 Nuevo" Margin="5" Click="NuevoButton_Click" />
                 <Button Content="✔ Guardar" Margin="5" Click="GuardarButton_Click" />
-                <Button Content="⛔ Eliminar" Margin="5" Click="EliminarButton_Click" />
+                <Button Content="⛔ Eliminar" Margin="5" Background="#F33939" Click="EliminarButton_Click" />
 
             </StackPanel>
 
